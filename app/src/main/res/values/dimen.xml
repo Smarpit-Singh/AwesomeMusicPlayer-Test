@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+    <dimen name="appBarTopMargin">0dp</dimen>
+
+
+    <!-- playback controls -->
+
+    <!-- navigation drawer -->
+
+    <!-- media browser listview -->
+    <!-- Margins for the ShowcaseView button -->
+
+    <!-- Margins for full screen activity-->
+
+</resources>

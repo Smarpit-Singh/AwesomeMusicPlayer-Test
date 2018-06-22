@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/albumImg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4a45474f" />
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="60dip"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <!-- Song Title -->
+            <TextView
+                android:id="@+id/songTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:text="The Good, The Bad And The Ugly"
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />"
+
+            <!-- Playlist button -->
+            <ImageButton
+                android:id="@+id/btnPlaylist"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:src="@drawable/btn_playlist" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            app:layout_heightPercent="70%">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/appBarTopMargin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="25dp">
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        app:layout_heightPercent="80%"
+                        app:layout_widthPercent="80%">
+
+                        <com.example.android.awesomemusicplayer.libraries.CircleImageView
+                            android:id="@+id/albumImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:scaleType="centerCrop" />
+
+                        <com.example.android.awesomemusicplayer.libraries.CircleImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@color/black_translucent" />
+
+
+                        <include
+                            layout="@layout/song_elapsedtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+
+
+                    </FrameLayout>
+
+                    <com.example.android.awesomemusicplayer.libraries.CircularSeekBar
+                        android:id="@+id/songProgressBar"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:maxHeight="1dp"
+                        android:progress="30"
+                        app:circle_color="#33000000"
+                        app:circle_progress_color="?attr/colorAccent"
+                        app:circle_stroke_width="2dp"
+                        app:layout_heightPercent="95%"
+                        app:layout_widthPercent="95%"
+                        app:pointer_color="?attr/colorAccent"
+                        app:pointer_halo_border_width="1.5dp"
+                        app:pointer_halo_color="?attr/colorAccent"
+                        app:pointer_halo_width="0.5dp" />
+
+                </android.support.percent.PercentRelativeLayout>
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/player_footer_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btnShuffle"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="center" />
+
+            <ImageView
+                android:id="@+id/btnRepeat"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:paddingLeft="5dp"
+                android:scaleType="center" />
+        </LinearLayout>
+
+        <!-- Repeat / Shuffle buttons -->
+
+        <LinearLayout
+            android:id="@+id/player_footer_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center">
+
+            <!-- Player Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <!-- Previous Button -->
+                <ImageButton
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                   />
+                <!-- Backward Button -->
+                <ImageButton
+                    android:id="@+id/btnBackward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                     />
+                <!-- Play Button -->
+                <ImageButton
+                    android:id="@+id/btnPlay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null" />
+                <!-- Forward Button -->
+                <ImageButton
+                    android:id="@+id/btnForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null" />
+                <!-- Next Button -->
+                <ImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

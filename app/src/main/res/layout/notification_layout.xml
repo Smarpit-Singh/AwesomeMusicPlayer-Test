@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@color/primaryLightColor">
+
+
+        <ImageView
+            android:id="@+id/img_notification"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/default_album_art"
+            />
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/img_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hhhh"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:maxLines="1"/>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/txt_song_singer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hhhh"
+                android:maxLines="1"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/img_notification"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Button
+            android:background="@android:drawable/ic_media_previous"
+            android:layout_weight="1"
+            android:id="@+id/noti_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:background="@android:drawable/ic_media_play"
+                android:layout_centerInParent="true"
+                android:id="@+id/noti_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:background="@android:drawable/ic_media_pause"
+                android:layout_centerInParent="true"
+                android:id="@+id/noti_pause"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:background="@android:drawable/ic_media_next"
+            android:layout_weight="1"
+            android:id="@+id/noti_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

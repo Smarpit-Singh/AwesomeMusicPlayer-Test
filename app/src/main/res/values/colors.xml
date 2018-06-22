@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#253562</color>
+    <color name="primaryLightColor">#b3bbe1</color>
+    <color name="primaryDarkColor">#1b274b</color>
+
+    <color name="divider_color">#C7C7CC</color>
+
+
+    <color name="primary_500">#3F51B5</color>
+    <!--Indigo 700-->
+    <!--Pink 500-->
+    <!--Pink 700-->
+    <color name="black_trans80">#33000000</color>
+
+    <color name="black_translucent">#66000000</color>
+
+
+</resources>
