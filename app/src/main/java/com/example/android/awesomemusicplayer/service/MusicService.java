@@ -160,7 +160,7 @@ public class MusicService extends Service implements
                 initMediaSession();
                 initMediaPlayer();
 
-            } catch (RemoteException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 stopSelf();
             }
